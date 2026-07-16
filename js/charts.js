@@ -91,9 +91,9 @@
   }
 
   function createCharts() {
-    var ctxBarras = document.getElementById("chart-barras");
-    var ctxPastel = document.getElementById("chart-pastel");
-    var ctxLinea = document.getElementById("chart-linea");
+    var ctxBarras = document.getElementById("chart-barras") || document.getElementById("chartBarras");
+    var ctxPastel = document.getElementById("chart-pastel") || document.getElementById("chartPastel");
+    var ctxLinea = document.getElementById("chart-linea") || document.getElementById("chartLinea");
 
     if (!ctxBarras || !ctxPastel || !ctxLinea || typeof Chart === "undefined") {
       return;
