@@ -1,0 +1,31 @@
+{
+  "titulo": "Votacion interna - Propuestas corporativas",
+  "descripcion": "Demo generica de resultados en tiempo real para cualquier proceso de votacion.",
+  "opciones": [
+    {
+      "id": "opcion-a",
+      "nombre": "Opcion A - Expansion digital",
+      "votos": 142,
+      "color": "#6B969D"
+    },
+    {
+      "id": "opcion-b",
+      "nombre": "Opcion B - Mejora operativa",
+      "votos": 98,
+      "color": "#3B4252"
+    },
+    {
+      "id": "opcion-c",
+      "nombre": "Opcion C - Formacion del equipo",
+      "votos": 76,
+      "color": "#CFD3D6"
+    },
+    {
+      "id": "opcion-d",
+      "nombre": "Opcion D - Sostenibilidad",
+      "votos": 54,
+      "color": "#084B8A"
+    }
+  ],
+  "historial": [120, 145, 168, 192, 215, 248, 270, 298, 325, 350, 370]
+}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/estilo.css">
     <link rel="icon" type="icon/png" href="resources/inicio/logo.png">
 
-    <title>Democratic</title>
+    <title>Democratic — Plantilla de Sistema de Votación</title>
   </head>
     <body>
       <div class="container-fluid" id="cont">
@@ -25,6 +25,7 @@
               <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7" id="text">
                 <img src="resources/inicio/barras.png" class="barras mt-3" width="400" height="3">
                 <h1 class="StarWars">Democratic</h1>
+                <p class="text-muted mb-0">Plantilla de sistema de votación</p>
                 <img src="resources/inicio/barras.png" class="barras mb-3"  width="400" height="3">
               </div>
               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2" id="objetos">
@@ -39,9 +40,9 @@
                 <div class="dropdown">
                   <button class="btn btn-secondary btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Languages <img src="resources/inicio/world.png" width="25px" height="25px"></button>
                   <div id="opciones" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" id="idioma" data-toggle="tooltip" data-placement="left" data-html="true" title="<em>Cambiar a idioma Español</em>" href="inicio.html">Español <img src="resources/inicio/spain_flag_100px.png" class="mb-1" width="25px" height="25px"></a>
-                    <a class="dropdown-item" id="idioma" data-toggle="tooltip" data-placement="left" data-html="true" title="<em>Change to English idiom</em>" href="ingles.html">English <img src="resources/inicio/usa_100px.png" class="mb-1" width="25px" height="25px"></a>
-                    <a class="dropdown-item" id="idioma" data-toggle="tooltip" data-placement="left" data-html="true" title="<em>Mudar para o idioma português</em>" href="portugues.html">Português <img src="resources/inicio/portugal_96px.png" class="mb-1" width="25px" height="25px"></a>
+                    <a class="dropdown-item" id="idioma" data-toggle="tooltip" data-placement="left" data-html="true" title="<em>Cambiar a idioma Español</em>" href="Inicio.html">Español <img src="resources/inicio/spain_flag_100px.png" class="mb-1" width="25px" height="25px"></a>
+                    <a class="dropdown-item" id="idioma" data-toggle="tooltip" data-placement="left" data-html="true" title="<em>Change to English idiom</em>" href="html/ingles.html">English <img src="resources/inicio/usa_100px.png" class="mb-1" width="25px" height="25px"></a>
+                    <a class="dropdown-item" id="idioma" data-toggle="tooltip" data-placement="left" data-html="true" title="<em>Mudar para o idioma português</em>" href="html/portugues.html">Português <img src="resources/inicio/portugal_96px.png" class="mb-1" width="25px" height="25px"></a>
                   </div>
                 </div>
               </div>
@@ -56,6 +57,9 @@
                     <ul class="navbar-nav mr-auto">
                       <li class="nav-item active">
                         <a class="nav-link" id="informacion1" data-toggle="tooltip" data-placement="top" data-html="true" title="<em>Ve a la sección Información</em>" href="#informacion">Información<span class="sr-only">(current)</span></a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" id="resultados1" data-toggle="tooltip" data-placement="top" data-html="true" title="<em>Ve a la sección de Resultados y gráficas</em>" href="#resultados">Resultados</a>
                       </li>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aclaraciones</a>
@@ -100,32 +104,32 @@
           <div class="row"  id="row">
             <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10 contenido">
               <div class="row" id="inicio">
-                    <div class=" col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6 contenido1">
+                    <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 contenido1">
                       <div class="card">
-                        <img src="resources/inicio/aviso.png " align="center" class="card-img-top aviso" id="ima-in">
-                        <img src="resources/inicio/actualizacionnotas.png" class="card-img-top notasA">
-                          <div class="card-body">
-                            <div class="jumbotron">
-                              <h2 class="display-4" id="textoA">&mdash; Mejora de interfaz &mdash;</h2>
-                              <p class="card-text" id="textoA"><br>Hemos mejorado la interfaz de la aplicación y agregado diferentes opciones al sistema para un uso más confortable para el usuario, de esta manera brindaremos un servicio de calidad con una amplia gama de opciones de votación...</p>
-                              <a href="#aviso" id="textoA" data-toggle="tooltip" data-placement="top" data-html="true" title="<em>Ir al apartado de Avisos</em>" class="btn btn-info">Leer más...</a>
-                            </div>
-                          </div>
-                      </div>
-                    </div>
-                    <div class=" col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6  contenido2 ">
-                      <div class="card" >
-                        <img src="resources/inicio/actualizacion.png " align="center" class="card-img-top" id="ima-in">
-                        <img src="resources/inicio/actualizacionnotas.png" class="card-img-top notasA">
-                          <div class="card-body">
-                            <div class="jumbotron">
-                              <h2 class="display-4" id="textoA">&mdash; Actualización<span class="badge badge-info"> 1.0</span> &mdash;</h2>
-                              <p class="card-text" id="textoA"><br>Actualmente, estamos trabajando en futuras actualizaciones que ayuden a un mejor manejo del programa y que resulte comodo y de fácil uso para los usuarios, tomamos en cuenta mucho sus opiniones para proximas actualizaciones...</p>
-                              <a href="#actualizacion" id="textoA"data-toggle="tooltip" data-placement="top" data-html="true" title="<em>Ir al apartado de Actualizaciones</em>" class="btn btn-info">Leer más...</a>
-                            </div>
+                        <div class="card-body">
+                          <div class="jumbotron mb-0">
+                            <h2 class="display-4" id="textoA">&mdash; Sistema de votación genérico &mdash;</h2>
+                            <p class="lead card-text" id="textoA">Democratic es una plantilla lista para organizar procesos de votación electrónica en empresas, colegios, asociaciones y encuestas internas.</p>
+                            <p class="card-text" id="textoA">Configure opciones de voto, registre participantes, asigne sedes y mesas, y consulte resultados con gráficas en tiempo real — sin depender de un contexto político ni electoral nacional.</p>
+                            <a href="#informacion" id="textoA" data-toggle="tooltip" data-placement="top" data-html="true" title="<em>Conoce las funciones del sistema</em>" class="btn btn-info btn-lg mr-2">Conocer el producto</a>
+                            <a href="#resultados" id="textoA" data-toggle="tooltip" data-placement="top" data-html="true" title="<em>Ver gráficas de demostración</em>" class="btn btn-outline-info btn-lg">Ver gráficas demo</a>
                           </div>
                         </div>
-                    </div>   
+                      </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 contenido2">
+                      <div class="card">
+                        <img src="resources/inicio/logo.png" align="center" class="card-img-top aviso mt-4" alt="Democratic" width="180" height="180">
+                        <div class="card-body text-center">
+                          <div class="jumbotron mb-0">
+                            <h3 class="StarWars">Democratic</h3>
+                            <p class="card-text"><span class="badge badge-info">Plantilla de votación</span></p>
+                            <p class="card-text">Corporativo · Escolar · Asociativo · Encuestas</p>
+                            <a href="#demostraciones" class="btn btn-info">Ver demostración</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                     <div class="container-fluid" id="aviso">
                       <div class="row">
                         <div class="col-12 banner2">
@@ -197,8 +201,8 @@
                                 <div  class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-9">
                                   <div class="card-body">
                                     <div class="jumbotron">
-                                      <h2 class="display-4" align="left">&mdash; ¿Qué es? &mdash;</h2>
-                                      <p id="parrafo" class="card-text">El proyecto consiste en la elaboración de un software de votación electrónica que permitiría votar desde un dispositivo conectado a Internet, puede tratarse de una red interna y controlada por la propia institución que organiza la elección, o puede realizarse la votación desde cualquier plataforma conectada a Internet, de esta manera el votante no deberá desplazarse hasta la casilla y podrá emitir su voto a través de la red.</p>
+                                      <h2 class="display-4" align="left">&mdash; ¿Qué es Democratic? &mdash;</h2>
+                                      <p id="parrafo" class="card-text">Democratic es una plantilla de software de votación electrónica adaptable a distintos contextos: juntas directivas, elecciones escolares, asambleas de asociaciones, encuestas internas y consultas organizacionales. Permite emitir votos desde dispositivos conectados a una red interna o controlada por la institución que administra el proceso.</p>
                                     </div>
                                   </div>
                                 </div>
@@ -209,12 +213,55 @@
                               <div>
                                 <div class="card-body">
                                   <div class="jumbotron">
-                                    <h2 class="display-4" align="left">&mdash; Concepción de idea &mdash;</h2>
-                                    <p id="parrafo" class="card-text">Entre el equipo de trabajo formulamos diversos programas innovadores que serian de gran interes para la comunidad, entre ellos estaba el Sistema de Votación formulada por uno de sus creadores, Gabriela Barrera, propuso un sistema de votación electronico, ya que actualmente el pais no cuenta con uno y seria de gran interez para la población poder votar de una manera electronica que facilitaria al usuario y a su forma del derecho al voto.</p>
+                                    <h2 class="display-4" align="left">&mdash; Para quién está pensado &mdash;</h2>
+                                    <p id="parrafo" class="card-text">La plantilla fue diseñada para equipos que necesitan un proceso de votación configurable sin desarrollar un sistema desde cero: administradores definen opciones y reglas, los participantes votan de forma guiada y los resultados se consolidan automáticamente con reportes visuales listos para compartir.</p>
                                   </div>
                                   <div class="jumbotron" id="jumboinfo">
-                                    <h2 class="display-4" align="left">&mdash; Funciones &mdash;</h2>
-                                    <p id="parrafo" class="card-text">El programa debe verificar el ingreso de datos del votante, requiriendo datos personales y verificar si ya han sido ingresados, permitir la selección de una de las opciones presentadas, y verificar si es la elección correcta, a través de este voto se actualizarán unas graficas de datos, sobre la cantidad de votos que presenta cada selección y sobre los votos de cada departamento.</p>
+                                    <h2 class="display-4" align="left">&mdash; Funciones principales &mdash;</h2>
+                                    <p id="parrafo" class="card-text">El sistema permite gestionar <strong>opciones de voto</strong>, registrar <strong>participantes</strong>, organizar <strong>sedes</strong> y <strong>mesas</strong>, validar el ingreso de cada votante, confirmar la selección antes de registrar el voto y actualizar <strong>resultados con gráficas</strong> (barras, pastel y líneas) según la distribución de votos por opción, sede o mesa.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-fluid" id="resultados">
+                      <div class="row">
+                        <div class="col-12 banner2">
+                          <h1>Resultados y gráficas <img src="resources/inicio/info_100px.png" class="Contentidoimagenes"></h1>
+                        </div>
+                        <div class="col-12 contenidos">
+                          <div class="row">
+                            <div class="col-12 contenido3">
+                              <div class="jumbotron">
+                                <h2 class="display-4" align="left">&mdash; Visualización de datos &mdash;</h2>
+                                <p id="parrafo" class="card-text">Los resultados de cada proceso de votación se presentan en gráficas interactivas. A continuación, placeholders listos para integrar con Chart.js (otro agente añadirá la lógica y datos de demostración).</p>
+                              </div>
+                              <div class="row">
+                                <div class="col-12 col-md-4 mb-4">
+                                  <div class="card h-100">
+                                    <div class="card-header bg-info text-white text-center">Gráfica de barras</div>
+                                    <div class="card-body">
+                                      <canvas id="chartBarras" width="400" height="280" aria-label="Gráfica de barras de resultados"></canvas>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-4">
+                                  <div class="card h-100">
+                                    <div class="card-header bg-info text-white text-center">Gráfica de pastel</div>
+                                    <div class="card-body">
+                                      <canvas id="chartPastel" width="400" height="280" aria-label="Gráfica de pastel de resultados"></canvas>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-12 col-md-4 mb-4">
+                                  <div class="card h-100">
+                                    <div class="card-header bg-info text-white text-center">Gráfica de líneas</div>
+                                    <div class="card-body">
+                                      <canvas id="chartLinea" width="400" height="280" aria-label="Gráfica de líneas de resultados"></canvas>
+                                    </div>
                                   </div>
                                 </div>
                               </div>
@@ -238,8 +285,8 @@
                                 <div  class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-9">
                                   <div class="card-body">
                                     <div class="jumbotron">
-                                      <h2 class="display-4" align="left">&mdash; Descarga de aplicación &mdash;</h2>
-                                      <p id="parrafo" class="card-text">En la imagen podemos ver la pantalla que le deberá aparecer si a seguido todos los pasos de instalación de el sistema informático, en el caso de que no le aparezca nada o directamente le aparezca que ha habido un problema con la instalación le recomendamos visitar nuestro canal de youtube donde explicamos que hacer, puede ver los problemas más frecuentes o enviarnos sus consultas.</p>
+                                      <h2 class="display-4" align="left">&mdash; Flujo de uso &mdash;</h2>
+                                      <p id="parrafo" class="card-text">Democratic sigue un flujo simple en tres pasos: el <strong>administrador</strong> configura el proceso (opciones, participantes, sedes y mesas), los <strong>participantes</strong> inician sesión y emiten su voto de forma guiada, y el sistema genera <strong>resultados con gráficas</strong> actualizadas automáticamente.</p>
                                     </div>
                                   </div>
                                 </div>
@@ -249,15 +296,53 @@
                                   <div  class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
                                     <div class="card-body">
                                       <div class="jumbotron">
-                                        <h2 class="display-4" align="left">&mdash; Inicio de sesión &mdash;</h2>
-                                        <p id="parrafo" class="card-text">En el siguiente video se les explica iniciar sesión en la aplicacion. En el caso de que sea un miembro de un partido politico debe comunicarse directamente con su partido par poder ayudarlo a ingresar a la aplicación.</p>
-                                        <p id="parrafo" class="card-text">Si despues de ver el video explicativo aun le surgen dudas o problemas para ingresar no dude en revisar el apartado de consultas frecuente o directamente le sugerimos que nos envie su consulta para poder ayudarlo, pedimos paciencia y sobre todo buena redacción para poder solventar sus dudas.</p>
+                                        <h2 class="display-4" align="left">&mdash; Paso 1: Configuración &mdash;</h2>
+                                        <p id="parrafo" class="card-text">El administrador crea el proceso de votación, define las opciones disponibles, carga participantes autorizados y asigna sedes o mesas según la organización (empresa, centro educativo, asociación, etc.).</p>
+                                        <h2 class="display-4" align="left">&mdash; Paso 2: Votación &mdash;</h2>
+                                        <p id="parrafo" class="card-text">Cada participante accede con sus credenciales, selecciona una opción y confirma su voto. El sistema valida identidad, evita votos duplicados y registra la elección de forma segura.</p>
+                                        <h2 class="display-4" align="left">&mdash; Paso 3: Resultados &mdash;</h2>
+                                        <p id="parrafo" class="card-text">Al cerrar o durante el proceso, los resultados se reflejan en gráficas de barras, pastel y líneas. Consulte la sección <a href="#resultados">Resultados</a> para ver los placeholders de las gráficas demo.</p>
                                         <p id="parrafo" class="card-text">Atte. Servicio técnico de Democratic</p>
                                       </div>
                                     </div>
                                   </div>
                                   <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 video">
                                     <iframe width="300" height="200" src="https://www.youtube.com/embed/pj2e2J134hI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container-fluid" id="resultados">
+                      <div class="row">
+                        <div class="col-12 banner2">
+                          <h1>Resultados de votacion <img src="resources/inicio/laptop_100px.png" class="Contentidoimagenes"></h1>
+                        </div>
+                        <div class="col-12 contenidos">
+                          <div class="row">
+                            <div class="col-12 contenido3">
+                              <div id="graficas">
+                                <div class="graficas-header">
+                                  <h2 id="votacion-titulo">Cargando demo...</h2>
+                                  <p id="votacion-tagline"></p>
+                                  <p id="votacion-total"></p>
+                                  <button type="button" id="btn-simular-voto">Simular voto</button>
+                                </div>
+                                <div class="graficas-grid">
+                                  <div class="grafica-card">
+                                    <h3>Grafica de barras</h3>
+                                    <canvas id="chart-barras"></canvas>
+                                  </div>
+                                  <div class="grafica-card">
+                                    <h3>Grafica circular</h3>
+                                    <canvas id="chart-pastel"></canvas>
+                                  </div>
+                                  <div class="grafica-card">
+                                    <h3>Grafica de frecuencias</h3>
+                                    <canvas id="chart-linea"></canvas>
                                   </div>
                                 </div>
                               </div>
@@ -282,37 +367,37 @@
                                   <ul class="list-unstyled" >
                                     <div id="co" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                       <li class="media" id="coment2">
-                                        <img src="resources/inicio/bot1.png" id="imagenU" class="align-self-center mt-2 mr-3" >
+                                        <img src="resources/inicio/gaby.png" id="imagenU" class="align-self-center mt-2 mr-3" alt="Avatar Ana M.">
                                           <div class="media-body">
-                                            <h5 class="mt-2">Lee Jong Suk</h5>
-                                            <p>Excelente sistema, fue muy facil de usar y sobre todo lo senti muy seguro porque nadie más podra tocar mi voto al ser virtual todo, sigan asi espero y se siga usando este sistema para las proximas elecciones y que mas personas apoyen a proyectos asi.</p>
+                                            <h5 class="mt-2">Ana M.</h5>
+                                            <p>Usamos Democratic para elegir al comité estudiantil. Fue sencillo configurar las opciones y los alumnos votaron sin complicaciones. Las gráficas nos ayudaron a presentar los resultados al instante.</p>
                                           </div>
                                       </li>
                                     </div>
                                     <div id="co" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                       <li class="media" id="coment2">
-                                        <img src="resources/inicio/bot2.png" id="imagenU" class="align-self-center mt-2 mr-3">
+                                        <img src="resources/inicio/lenny.png" id="imagenU" class="align-self-center mt-2 mr-3" alt="Avatar Carlos R.">
                                           <div class="media-body">
-                                            <h5 class="mt-2">LENNYX 004</h5>
-                                            <p>Bonito sistema, me sentí seguro en todo momento, las interfaces de el programa son muy llamativas y me gusto que al momento de votar podamos ver imagenes de los candidatos y de los partidos políticos.</p>
+                                            <h5 class="mt-2">Carlos R.</h5>
+                                            <p>En nuestra empresa lo usamos para una encuesta interna sobre beneficios. La interfaz es clara, el flujo de confirmación da confianza y el panel de resultados resume todo de forma visual.</p>
                                           </div>
                                       </li>
                                     </div>
                                     <div id="co" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                       <li class="media" id="coment2">
-                                        <img src="resources/inicio/bot3.png" id="imagenU" class="align-self-center mt-2 mr-3">
+                                        <img src="resources/inicio/bot1.png" id="imagenU" class="align-self-center mt-2 mr-3" alt="Avatar Laura S.">
                                           <div class="media-body">
-                                            <h5 class="mt-2 mb-1">Sadness1234</h5>
-                                            <p>La aplicación de Democratic me parecio un buen sistema de votación en linea, su interfaz y sus colores me parecieron agradables aunque quisiera que agregaran más métodos de recuperar contraseña.</p>
+                                            <h5 class="mt-2 mb-1">Laura S.</h5>
+                                            <p>La asociación de vecinos organizó una consulta sobre actividades comunitarias. Democratic nos permitió registrar participantes por sede y ver resultados por mesa sin hojas de cálculo.</p>
                                           </div>
                                       </li>
                                     </div>
                                     <div id="co" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
                                       <li class="media" id="coment2">
-                                        <img src="resources/inicio/Nayib.png" id="imagenU" class="align-self-center mt-2 mr-3">
+                                        <img src="resources/inicio/bot2.png" id="imagenU" class="align-self-center mt-2 mr-3" alt="Avatar Miguel T.">
                                           <div class="media-body">
-                                            <h5 class="mt-2 mb-1">Nayib 503</h5>
-                                            <p>Wow! maravillosa aplicación, tienen talento, Me pondre en contacto con su equipo para poder usar esta aplicación en las proximas elecciones! Felicidades, son un orgullo para el pais.</p>
+                                            <h5 class="mt-2 mb-1">Miguel T.</h5>
+                                            <p>Excelente plantilla genérica. Configuramos opciones personalizadas para una votación de proyectos internos y el equipo de soporte respondió rápido a nuestras dudas técnicas.</p>
                                           </div>
                                       </li>
                                     </div>
@@ -825,8 +910,8 @@
               <a type="button" href="#contactenos" class="btn btn-info">Contáctenos</a>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 numeros">
-              <p>Democratic</p>
-              <p>Derechos reservados 2020</p>
+              <p>Democratic — Plantilla de sistema de votación</p>
+              <p>Derechos reservados 2026</p>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2 numeros">
               <p>8034-5678</p>
@@ -837,22 +922,16 @@
       </div>         
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script> 
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+      <script src="js/config.js"></script>
+      <script src="js/charts.js"></script>
       <script src="js/funciones.js"></script>
       <script>
-                $(function () {
-          $('[data-toggle="tooltip"]').tooltip()
-        })
+        $(function () {
+          $('[data-toggle="tooltip"]').tooltip();
+        });
       </script>
-      <script>
-          window.onload = reloj();
-          window.onload = fecha();
-          window.onload = function(){
-            var contenedor = document.getElementById('contenedor_carga');
-                contenedor.style.visibility = 'hidden';
-                contenedor.style.opacity = '0';
-            }
-      </script>     
     </body>
   </html>   
 
