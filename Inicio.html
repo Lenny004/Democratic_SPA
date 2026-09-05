@@ -1,894 +1,292 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/estilo.css">
-    <link rel="icon" type="icon/png" href="resources/inicio/logo.png">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Democratic, plantilla configurable para procesos de votación electrónica.">
+  <title>Democratic | Plantilla de votación</title>
+  <link rel="icon" type="image/png" href="resources/inicio/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <header id="inicio" class="site-header py-4">
+    <div class="container">
+      <div class="row align-items-center g-4 text-center text-lg-start">
+        <div class="col-lg-2"><img class="brand-logo" src="resources/inicio/logo.png" alt="Logotipo de Democratic" width="112" height="112"></div>
+        <div class="col-lg-7">
+          <h1 class="brand-title mb-2">Democratic</h1>
+          <p class="lead mb-0">Plantilla de sistema de votación</p>
+        </div>
+        <div class="col-lg-3 d-flex flex-column align-items-center align-items-lg-end gap-2">
+          <div class="date-panel rounded bg-dark p-2 text-center" aria-live="polite">
+            <div id="clock" class="fw-semibold"></div>
+            <div id="date" class="small text-white-50"></div>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Idioma</button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item active" href="Inicio.html" lang="es" aria-current="page">Español</a></li>
+              <li><a class="dropdown-item" href="html/ingles.html" lang="en">English</a></li>
+              <li><a class="dropdown-item" href="html/portugues.html" lang="pt">Português</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
 
-    <title>Democratic — Plantilla de Sistema de Votación</title>
-  </head>
-    <body>
-      <div class="container-fluid" id="cont">
-        <div id="todo">
-          <div class="row" id="row">
-            <div class="col-12">
-                <div id="contenedor_carga">
-                  <div id="carga"></div>
-                </div>
-              <div class="row">
-                <div class="col-12 banner">
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2" >
-                <img src="resources/inicio/logo.png" class="cambio mt-1" width="150" height="150" id="imag1">
-              </div>
-              <div class="col-12 col-sm-12 col-md-12 col-lg-7 col-xl-7 col-xxl-7" id="text">
-                <img src="resources/inicio/barras.png" class="barras mt-3" width="400" height="3">
-                <h1 class="StarWars">Democratic</h1>
-                <p class="text-muted mb-0">Plantilla de sistema de votación</p>
-                <img src="resources/inicio/barras.png" class="barras mb-3"  width="400" height="3">
-              </div>
-              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2 col-xl-2 col-xxl-2" id="objetos">
-                <div align="center">
-                  <div id="clockdate">
-                    <h5 id="clock"></h5>
-                  </div>
-                  <div id="fecha">
-                    <h5 id="date"></h5>
-                  </div>
-                </div>
-                <div class="dropdown">
-                  <button class="btn btn-secondary btn-info dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Languages <img src="resources/inicio/world.png" width="25px" height="25px"></button>
-                  <div id="opciones" class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" id="idioma" data-toggle="tooltip" data-placement="left" data-html="true" title="<em>Cambiar a idioma Español</em>" href="Inicio.html">Español <img src="resources/inicio/spain_flag_100px.png" class="mb-1" width="25px" height="25px"></a>
-                    <a class="dropdown-item" id="idioma" data-toggle="tooltip" data-placement="left" data-html="true" title="<em>Change to English idiom</em>" href="html/ingles.html">English <img src="resources/inicio/usa_100px.png" class="mb-1" width="25px" height="25px"></a>
-                    <a class="dropdown-item" id="idioma" data-toggle="tooltip" data-placement="left" data-html="true" title="<em>Mudar para o idioma português</em>" href="html/portugues.html">Português <img src="resources/inicio/portugal_96px.png" class="mb-1" width="25px" height="25px"></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-              </div> 
-              <div class="row">
-              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 menu">
-                <nav class="navbar navbar-expand-lg">
-                  <a class="navbar-brand" id="inicio1" href="#inicio">Inicio</a>
-                  <button id="booto" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                      <li class="nav-item active">
-                        <a class="nav-link" id="informacion1" data-toggle="tooltip" data-placement="top" data-html="true" title="<em>Ve a la sección Información</em>" href="#informacion">Información<span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" id="resultados1" data-toggle="tooltip" data-placement="top" data-html="true" title="<em>Ve a la sección de Resultados y gráficas</em>" href="#resultados">Resultados</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Aclaraciones</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" id="demostraciones1" data-toggle="tooltip" data-placement="top" data-html="true" title="<em>Ve a la sección Demostraciones</em>" href="#demostraciones">Demostraciones</a>
-                          <a class="dropdown-item" id="reseñas1" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<em>Ve a la sección Reseñas de los Usuarios</em>" href="#reseñas">Testimonios de Usuarios</a>
-                        </div>
-                      </li>
-                      <li class="nav-item active">
-                        <a class="nav-link" id="equipo1" data-toggle="tooltip" data-placement="top" data-html="true" title="<em>Ve a la sección Equipo de Trabajo</em>" href="#equipo">Equipo de trabajo<span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Descargas</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" id="manuales1" data-toggle="tooltip" data-placement="top" data-html="true" title="<em>Ve a la sección Manuales de Usuario</em>" href="#manuales">Manuales de Usuario</a>
-                          <a class="dropdown-item" id="versiones1" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<em>Ve a la sección Versiones del sistema</em>"href="#versiones">Versiones anteriores del sistema</a>
-                        </div>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Consultas</a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" id="errores1" data-toggle="tooltip" data-placement="top" data-html="true" title="<em>Ve a la sección Preguntas Frecuentes</em>" href="#errores">Preguntas Frecuentes</a>
-                          <a class="dropdown-item" id="requerimientos1" data-toggle="tooltip" data-placement="left" data-html="true" title="<em>Ve a la sección de Requerimientos</em>" href="#requerimientos">Requerimientos</a>
-                        </div>
-                      </li>
-                      <li class="nav-item active">
-                        <a class="nav-link" id="contactenos1" data-toggle="tooltip" data-placement="top" data-html="true" title="<em>Ve a la sección de Contactos</em>" href="#contactenos">Contactenos<span class="sr-only">(current)</span></a>
-                      </li>
-                    </ul>
-                    <form class="form-inline my-2 my-lg-0">
-                      <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search" >
-                      <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
-                    </form>
-                  </div>
-                </nav>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="todo">
-          <div class="row"  id="row">
-            <div class="col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10 contenido">
-              <div class="row" id="inicio">
-                    <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 contenido1">
-                      <div class="card">
-                        <div class="card-body">
-                          <div class="jumbotron mb-0">
-                            <h2 class="display-4" id="textoA">&mdash; Sistema de votación genérico &mdash;</h2>
-                            <p class="lead card-text" id="textoA">Democratic es una plantilla lista para organizar procesos de votación electrónica en empresas, colegios, asociaciones y encuestas internas.</p>
-                            <p class="card-text" id="textoA">Configure opciones de voto, registre participantes, asigne sedes y mesas, y consulte resultados con gráficas en tiempo real — sin depender de un contexto político ni electoral nacional.</p>
-                            <a href="#informacion" id="textoA" data-toggle="tooltip" data-placement="top" data-html="true" title="<em>Conoce las funciones del sistema</em>" class="btn btn-info btn-lg mr-2">Conocer el producto</a>
-                            <a href="#resultados" id="textoA" data-toggle="tooltip" data-placement="top" data-html="true" title="<em>Ver gráficas de demostración</em>" class="btn btn-outline-info btn-lg">Ver gráficas demo</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-5 col-lg-5 col-xl-5 contenido2">
-                      <div class="card">
-                        <img src="resources/inicio/logo.png" align="center" class="card-img-top aviso mt-4" alt="Democratic" width="180" height="180">
-                        <div class="card-body text-center">
-                          <div class="jumbotron mb-0">
-                            <h3 class="StarWars">Democratic</h3>
-                            <p class="card-text"><span class="badge badge-info">Plantilla de votación</span></p>
-                            <p class="card-text">Corporativo · Escolar · Asociativo · Encuestas</p>
-                            <a href="#demostraciones" class="btn btn-info">Ver demostración</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container-fluid" id="aviso">
-                      <div class="row">
-                        <div class="col-12 banner2">
-                          <h1>Aviso <img src="resources/inicio/warning_100px.png" class="Contentidoimagenes"></h1>
-                        </div>
-                        <div class="col-12 contenidos">
-                          <div class="row">
-                            <div class="col-12 contenido3">
-                              <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-9">
-                                  <div class="card" >
-                                    <div class="card-body">
-                                      <div class="jumbotron">
-                                        <h2 class="display-4">&mdash; Mejora de interfaz &mdash;</h2>
-                                        <p id="parrafo" class="card-text">Hemos mejorado la interfaz de la aplicación y agregado diferentes opciones al sistema para un uso más confortable para el usuario, de esta manera brindaremos un servicio de calidad con una amplia gama de opciones de votación.</p>
-                                        <p>En pocos dias se estaria actualizando el sistema de navegación del programa para solucionar problemas de incompatibilidad en ciertos sistemas operativos. Y con ello se lanzaria la actualización 1,1 que daria solución a estos problemas. Se solucionaran los problemas de las gráficas de votaciones.</p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                                  <img src="resources/inicio/aviso2.png" class="card-img-top" id="aviso-imagen" align="right" width="200" height="240">
-                                  <img src="resources/inicio/exclamación.png" class="card-img-top Exclamacion">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container-fluid" id="actualizacion">
-                      <div class="row">
-                        <div class="col-12 banner2">
-                          <h1>Actualización <img src="resources/inicio/refresh_100px.png" class="Contentidoimagenes"></h1>
-                        </div>
-                        <div class="col-12 contenidos">
-                          <div class="row">
-                            <div class="col-12 contenido3">
-                              <div class="card">
-                                <div class="card-body">
-                                  <div class="jumbotron">
-                                    <h2 class="display-4">&mdash; Actualización <span class="badge badge-warning">1.0</span> &mdash;</h2>
-                                    <p id="parrafo" class="card-text">Actualmente, estamos trabajando en futuras actualizaciones que ayuden a un mejor manejo del programa y que resulte comodo y de fácil uso para los usuarios.Es importante que sepan que leemos todas sus sugerencias para mejorar siempre su experiencia como usuarios cualquier problema con la aplicacion no duden en informarlo trataremos de solucionarlo lo mas pronto posible.</p>
-                                    <p>En pocos dias se estaria actualizando el sistema de navegación del programa para solucionar problemas de incompatibilidad en ciertos sistemas operativos. Y con ello se lanzaria la actualización 1,1 que daria solución a estos problemas. Se solucionaran los problemas de las gráficas de votaciones.</p>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-12 mb-4">
-                                <div id="imagen" >
-                                  <img src="resources/inicio/actu1.png" class="card-img-top actu" align="center">
-                                  <img src="resources/inicio/digitos.png" class="card-img-top digitos">
-                                  <img src="resources/inicio/digitos.png" class="card-img-top digitos2">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container-fluid" id="informacion">
-                      <div class="row">
-                        <div class="col-12 banner2">
-                          <h1>Información del sistema <img src="resources/inicio/info_100px.png" class="Contentidoimagenes"></h1>
-                        </div>
-                        <div class="col-12 contenidos">
-                          <div class="row">
-                            <div class="col-12 contenido3">
-                              <div class="row">
-                                <div  class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-9">
-                                  <div class="card-body">
-                                    <div class="jumbotron">
-                                      <h2 class="display-4" align="left">&mdash; ¿Qué es Democratic? &mdash;</h2>
-                                      <p id="parrafo" class="card-text">Democratic es una plantilla de software de votación electrónica adaptable a distintos contextos: juntas directivas, elecciones escolares, asambleas de asociaciones, encuestas internas y consultas organizacionales. Permite emitir votos desde dispositivos conectados a una red interna o controlada por la institución que administra el proceso.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                                  <img src="resources/inicio/logo.png" id="imageneslogo" class="card-img-top" >
-                                </div>
-                              </div>
-                              <div>
-                                <div class="card-body">
-                                  <div class="jumbotron">
-                                    <h2 class="display-4" align="left">&mdash; Para quién está pensado &mdash;</h2>
-                                    <p id="parrafo" class="card-text">La plantilla fue diseñada para equipos que necesitan un proceso de votación configurable sin desarrollar un sistema desde cero: administradores definen opciones y reglas, los participantes votan de forma guiada y los resultados se consolidan automáticamente con reportes visuales listos para compartir.</p>
-                                  </div>
-                                  <div class="jumbotron" id="jumboinfo">
-                                    <h2 class="display-4" align="left">&mdash; Funciones principales &mdash;</h2>
-                                    <p id="parrafo" class="card-text">El sistema permite gestionar <strong>opciones de voto</strong>, registrar <strong>participantes</strong>, organizar <strong>sedes</strong> y <strong>mesas</strong>, validar el ingreso de cada votante, confirmar la selección antes de registrar el voto y actualizar <strong>resultados con gráficas</strong> (barras, pastel y líneas) según la distribución de votos por opción, sede o mesa.</p>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container-fluid" id="demostraciones">
-                      <div class="row">
-                        <div class="col-12 banner2">
-                          <h1>Demostración <img src="resources/inicio/laptop_100px.png" class="Contentidoimagenes"></h1>
-                        </div>
-                        <div class="col-12 contenidos">
-                          <div class="row">
-                            <div class="col-12 contenido3">
-                              <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3">
-                                  <img src="resources/inicio/demostraciones.png" id="imagen-demo" class="card-img-top">
-                                </div>
-                                <div  class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 col-xxl-9">
-                                  <div class="card-body">
-                                    <div class="jumbotron">
-                                      <h2 class="display-4" align="left">&mdash; Flujo de uso &mdash;</h2>
-                                      <p id="parrafo" class="card-text">Democratic sigue un flujo simple en tres pasos: el <strong>administrador</strong> configura el proceso (opciones, participantes, sedes y mesas), los <strong>participantes</strong> inician sesión y emiten su voto de forma guiada, y el sistema genera <strong>resultados con gráficas</strong> actualizadas automáticamente.</p>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div>
-                                <div class="row">
-                                  <div  class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8">
-                                    <div class="card-body">
-                                      <div class="jumbotron">
-                                        <h2 class="display-4" align="left">&mdash; Paso 1: Configuración &mdash;</h2>
-                                        <p id="parrafo" class="card-text">El administrador crea el proceso de votación, define las opciones disponibles, carga participantes autorizados y asigna sedes o mesas según la organización (empresa, centro educativo, asociación, etc.).</p>
-                                        <h2 class="display-4" align="left">&mdash; Paso 2: Votación &mdash;</h2>
-                                        <p id="parrafo" class="card-text">Cada participante accede con sus credenciales, selecciona una opción y confirma su voto. El sistema valida identidad, evita votos duplicados y registra la elección de forma segura.</p>
-                                        <h2 class="display-4" align="left">&mdash; Paso 3: Resultados &mdash;</h2>
-                                        <p id="parrafo" class="card-text">Al cerrar o durante el proceso, los resultados se reflejan en gráficas de barras, pastel y líneas. Consulte la sección <a href="#resultados">Resultados</a> para ver los placeholders de las gráficas demo.</p>
-                                        <p id="parrafo" class="card-text">Atte. Servicio técnico de Democratic</p>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3 video">
-                                    <iframe width="300" height="200" src="https://www.youtube.com/embed/pj2e2J134hI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container-fluid" id="resultados">
-                      <div class="row">
-                        <div class="col-12 banner2">
-                          <h1>Resultados y gráficas <img src="resources/inicio/info_100px.png" class="Contentidoimagenes"></h1>
-                        </div>
-                        <div class="col-12 contenidos">
-                          <div class="row">
-                            <div class="col-12 contenido3">
-                              <div id="graficas">
-                                <div class="graficas-header">
-                                  <h2 id="votacion-titulo">Cargando demo...</h2>
-                                  <p id="votacion-tagline"></p>
-                                  <p id="votacion-total"></p>
-                                  <button type="button" id="btn-simular-voto">Simular voto</button>
-                                </div>
-                                <div class="graficas-grid">
-                                  <div class="grafica-card">
-                                    <h3>Grafica de barras</h3>
-                                    <canvas id="chart-barras"></canvas>
-                                  </div>
-                                  <div class="grafica-card">
-                                    <h3>Grafica circular</h3>
-                                    <canvas id="chart-pastel"></canvas>
-                                  </div>
-                                  <div class="grafica-card">
-                                    <h3>Grafica de frecuencias</h3>
-                                    <canvas id="chart-linea"></canvas>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container-fluid" id="reseñas">
-                      <div class="row">
-                        <div class="col-12 banner2">
-                          <h1>Testimonios de usuarios <img src="resources/inicio/couple_icloud_100px.png" class="Contentidoimagenes"></h1>
-                        </div>
-                        <div class="col-12 contenidos">
-                          <div class="row">
-                            <div class="col-12 contenido3">
-                              <div class="row">
-                                <div class="col-12 " id="coment" align="left">
-                                  <h3><span class="badge badge badge-primary">Testimonios de Usuarios</span></h3>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                  <ul class="list-unstyled" >
-                                    <div id="co" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                      <li class="media" id="coment2">
-                                        <img src="resources/inicio/gaby.png" id="imagenU" class="align-self-center mt-2 mr-3" alt="Avatar Ana M.">
-                                          <div class="media-body">
-                                            <h5 class="mt-2">Ana M.</h5>
-                                            <p>Usamos Democratic para elegir al comité estudiantil. Fue sencillo configurar las opciones y los alumnos votaron sin complicaciones. Las gráficas nos ayudaron a presentar los resultados al instante.</p>
-                                          </div>
-                                      </li>
-                                    </div>
-                                    <div id="co" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                      <li class="media" id="coment2">
-                                        <img src="resources/inicio/lenny.png" id="imagenU" class="align-self-center mt-2 mr-3" alt="Avatar Carlos R.">
-                                          <div class="media-body">
-                                            <h5 class="mt-2">Carlos R.</h5>
-                                            <p>En nuestra empresa lo usamos para una encuesta interna sobre beneficios. La interfaz es clara, el flujo de confirmación da confianza y el panel de resultados resume todo de forma visual.</p>
-                                          </div>
-                                      </li>
-                                    </div>
-                                    <div id="co" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                      <li class="media" id="coment2">
-                                        <img src="resources/inicio/bot1.png" id="imagenU" class="align-self-center mt-2 mr-3" alt="Avatar Laura S.">
-                                          <div class="media-body">
-                                            <h5 class="mt-2 mb-1">Laura S.</h5>
-                                            <p>La asociación de vecinos organizó una consulta sobre actividades comunitarias. Democratic nos permitió registrar participantes por sede y ver resultados por mesa sin hojas de cálculo.</p>
-                                          </div>
-                                      </li>
-                                    </div>
-                                    <div id="co" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
-                                      <li class="media" id="coment2">
-                                        <img src="resources/inicio/bot2.png" id="imagenU" class="align-self-center mt-2 mr-3" alt="Avatar Miguel T.">
-                                          <div class="media-body">
-                                            <h5 class="mt-2 mb-1">Miguel T.</h5>
-                                            <p>Excelente plantilla genérica. Configuramos opciones personalizadas para una votación de proyectos internos y el equipo de soporte respondió rápido a nuestras dudas técnicas.</p>
-                                          </div>
-                                      </li>
-                                    </div>
-                                  </ul>
-                                </div>    
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container-fluid" id="equipo">
-                      <div class="row">
-                        <div class="col-12 banner2">
-                          <h1>Equipo de trabajo <img src="resources/inicio//user_group_100px.png" class="Contentidoimagenes"></h1>
-                        </div>
-                        <div class="col-12 contenidos">
-                          <div class="row">
-                            <div class="col-12 contenido3">
-                              <div class="row">
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                                  <div class="row">
-                                    <div class="col-12 contenido3">
-                                      <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
-                                          <img src="resources/inicio/gaby.png" id="imagen-e" class="card-img-top">
-                                        </div>
-                                        <div  class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 mt-2">
-                                          <div class="card-body" id="gaby">
-                                            <h3 align="left">Gabriela Susana Méndez Barrera</h3>
-                                            <p id="parrafo" class="card-text">La diseñadora principal del equipo técnico de Democratic, propuso la idea de la elaboración de el sistema y reunio al equipo asi como tambien designo los roles a cada uno. Su meta es especailizarse en el diseño web.</p>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-12 contenido3">
-                                      <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4 mb-4">
-                                          <img src="resources/inicio/vargas.png" id="imagen-e" class="card-img-top">
-                                        </div>
-                                        <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 mt-2">
-                                          <div class="card-body" id="gaby">
-                                            <h3 align="left">Eduardo Ernesto Vargas Hernández</h3>
-                                            <p id="parrafo" class="card-text">El segundo programador del equipo técnico de Democratic, fué uno de los más involucrados al momento de realizar la base de datos de el sistema. Un gran apoyo para el equipo desea especializarse en la creación de base de datos.</p>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                                  <div class="row">
-                                    <div class="col-12 contenido3">
-                                      <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4">
-                                          <img src="resources/inicio/lenny.png" id="imagen-e" class="card-img-top">
-                                        </div>
-                                        <div  class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 mt-2">
-                                          <div class="card-body" id="gaby">
-                                            <h3 align="left">Lenny Adrián Elías Sánchez</h3>
-                                            <p id="parrafo" class="card-text">Programador del equipo técnico de Democratic, es el más involucrado en la realización de la base de datos asi como tambien en la creación de la interfaz de el sistema. Es diestro en el ambito de programación y base de datos.</p>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="row">
-                                    <div class="col-12 contenido3">
-                                      <div class="row">
-                                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4 mt-4 mb-4">
-                                          <img src="resources/inicio/monica.png" id="imagen-e" class="card-img-top">
-                                        </div>
-                                        <div  class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 mt-2">
-                                          <div class="card-body" id="gaby">
-                                            <h3 align="left">Mónica Abigail Mejía Martínez</h3>
-                                            <p id="parrafo" class="card-text">La segunda diseñadora del equipo técnico de Democratic, fue una las encargadas de apoyar a la realización de nuestra página web, suplantando a el antiguo tesorero.</p>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container-fluid" id="manuales">
-                      <div class="row">
-                        <div class="col-12 banner2">
-                          <h1>Manuales de usuario <img src="resources/inicio/book_100px.png" class="Contentidoimagenes"></h1>
-                        </div>
-                        <div class="col-12 contenidos">
-                          <div class="row">
-                            <div class="col-12 contenido3">
-                              <div class="row">
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                                  <div class="row">
-                                    <div class="col-12 contenido3">
-                                      <div class="card" >
-                                        <img src="resources/inicio/pdf.png " id="imagenManual" align="center" class="card-img-top mt-4">
-                                        <div class="card-body">
-                                          <div class="jumbotron">
-                                            <h2 class="display-4">Manual<br>Técnico</h2>
-                                            <p class="card-text">Aqui podras descargar el manual técnico del sistema donde podras encontrar los objetivos del sistema, diagramas, metodos de incriptación de datos, entre otros temas que podrian interesarle. </p>
-                                            <a href="resources/inicio/Manual tecnico.pdf" data-toggle="tooltip" data-html="true" title="<em>¡Da un vistaso al archivo en tu navegador!</em>" class="btn btn-danger">Vista previa</a>
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Descargar</button>
-                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                              <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                  <div class="modal-header">
-                                                    <h5 class="modal-title titulomodal" id="exampleModalLabel">Confirmación de descarga</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                  </div>
-                                                  <div class="modal-body textomodal">
-                                                    ¿Estás seguro que quieres descargar el archivo?
-                                                  </div>
-                                                  <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                    <a href="resources/inicio/Manual tecnico.docx" data-toggle="tooltip" data-html="true" title="<em>¡Guarda el documento en tu dispositivo!</em>"  download="Manual Tecnico Democratic"  class="btn btn-primary" value="Input" type="submit">Descargar</a>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-                                  <div class="row">
-                                    <div class="col-12 contenido3">
-                                      <div class="card" >
-                                        <img src="resources/inicio/pdf.png " id="imagenManual" align="center" class="card-img-top mt-4" >
-                                        <div class="card-body">
-                                          <div class="jumbotron">
-                                            <h2 class="display-4">Manual de <br> requerimientos</h2>
-                                            <p class="card-text">Aqui podras descargar el manual de requerimientos de el sistema donde encontraras los requerimientos minimos de el sistema a tener en cuaenta al instalar el sistema, entre otros temas de interes.</p>
-                                            <a href="resources/inicio/Manual de requerimientos.pdf" data-toggle="tooltip" data-html="true" title="<em>¡Da un vistaso al archivo en tu navegador!</em>" class="btn btn-danger">Vista previa</a>
-                                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Descargar</button>
-                                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                              <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                  <div class="modal-header">
-                                                    <h5 class="modal-title titulomodal" id="exampleModalLabel">Confirmación de descarga</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                      <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                  </div>
-                                                  <div class="modal-body textomodal">
-                                                    ¿Estás seguro que quieres descargar el archivo?
-                                                  </div>
-                                                  <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                    <a href="resources/inicio/Manual tecnico.docx" data-toggle="tooltip" data-html="true" title="<em>¡Guarda el documento en tu dispositivo!</em>"  download="Manual Tecnico Democratic"  class="btn btn-primary" value="Input" type="submit">Descargar</a>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container-fluid" id="versiones">
-                      <div class="row">
-                        <div class="col-12 banner2">
-                          <h1>Versiones del sistema <img src="resources/inicio/download_100px.png" class="Contentidoimagenes"></h1>
-                        </div>
-                        <div class="col-12 contenidos">
-                          <div class="row">
-                            <div class="col-12">
-                              <div class="row">
-                                <div class="col-12 contenido3">
-                                  <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
-                                    <img src="resources/inicio/app.png" id="ima-app"  align="center" class="card-img-top mt-4">
-                                  </div>
-                                  <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                                    <div class="card" >
-                                      <div class="card-body" >
-                                        <div class="jumbotron" id="jumboversiones">
-                                          <h2 class="display-4"><span class="badge badge-info">Versión 0.9</span></h2>
-                                          <p class="card-text">Se añadio más de una nueva gráfica automatica, esto para poder observar los datos de las votaciones en gráfica de barras, gráfica circular o pastel y gráfica de frecuencias.</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="bo-app">
-                                    <!-- Button modal -->
-                                    <button type="button"class="btn btn-primary mt-5" data-toggle="modal" data-target="#ModalVersion">Descargar</button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="ModalVersion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h5 class="modal-title titulomodal" id="exampleModalLabel">Confirmación de descarga</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                            </button>
-                                          </div>
-                                          <div class="modal-body textomodal">
-                                            ¿Estás seguro que quieres descargar el archivo?
-                                          </div>
-                                          <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                            <a href="resources/inicio/Democratic full.rar"  download="exe"  class="btn btn-primary" value="Input" type="submit">Descargar</a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col-12">
-                              <div class="row">
-                                <div class="col-12 contenido3">
-                                  <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2">
-                                    <img src="resources/inicio/app.png  " id="ima-app" align="center" class="card-img-top mt-4">
-                                  </div>
-                                  <div class="col-12 col-sm-12 col-md-7 col-lg-7 col-xl-7 col-xxl-7">
-                                    <div class="card">
-                                      <div class="card-body">
-                                        <div class="jumbotron">
-                                          <h2 class="display-4"><span class="badge badge-info">Versión 0.8</span></h2>
-                                          <p class="card-text">La instalación es mucho más facil y con la opción de crear un acceso directo de la aplicación en el escritorio del usuario.</p>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <div class="col-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="bo-app">
-                                    <!-- Button modal -->
-                                    <button type="button"  class="btn btn-primary mt-5 mb-5" data-toggle="modal" data-target="#ModalVersion">Descargar</button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="ModalVersion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog">
-                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                            <h5 class="modal-title titulomodal" id="exampleModalLabel">Confirmación de descarga</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                              <span aria-hidden="true">&times;</span>
-                                            </button>
-                                          </div>
-                                          <div class="modal-body textomodal">
-                                            ¿Estás seguro que quieres descargar el archivo?
-                                          </div>
-                                          <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                            <a href="resources/inicio/app.rar"  download="exe"  class="btn btn-primary" value="Input" type="submit">Descargar</a>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container-fluid" id="errores">
-                      <div class="row">
-                        <div class="col-12 banner2">
-                          <h1>Preguntas Frecuentes <img src="resources/inicio/question_mark_100px.png" class="Contentidoimagenes"></h1>
-                        </div>
-                        <div class="col-12 contenidos">
-                          <div class="row">
-                            <div class="col-12 " >
-                              <div class="row">
-                                <div class="col-12">
-                                  <div class="row">
-                                    <div class="col-12 contenido3">
-                                      <div class="card text-center" >
-                                        <div class="card-body">
-                                          <div class="jumbotron" align="center" >
-                                            <h2 class="display-4">¿Qué debo hacer si no inicia la instalación?</h2>
-                                            <p class="card-text">Probablemente sea que hemos deshabilitado el programa porque estamos haciendo mantenimiento o puede ser un poblema de conexión.En cualquiera de los casos contacta con el equipo de matenimiento.</p>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-12">
-                                  <div class="row">
-                                    <div class="col-12 contenido3">
-                                      <div class="card text-center" >
-                                        <div class="card-body">
-                                          <div class="jumbotron">
-                                            <h2 class="display-4">¿Qué debo hacer si no se inicia el sistema una vez instalado?</h2>
-                                            <p class="card-text">Verifica que tu sistema operativo sea compatible con los requisitos que pide el programa, Si no es el sistema operativo de tu dispositivo, posiblemente sea un error de los frameworks instalados, actualizalos a la versión requerida. Si no es ninguno ponte en contacto con nosotros!.</p>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-12">
-                                  <div class="row">
-                                    <div class="col-12 contenido3">
-                                      <div class="card text-center">
-                                        <div class="card-body">
-                                          <div class="jumbotron">
-                                            <h2 class="display-4">¿Qué debo hacer si no recuerdo la contraseña?</h2>
-                                            <p class="card-text">No te preocupes, el sistema puede enviarte una nueva contraseña al correo enlazado y si en caso perdiste el correo, debes ponerte en contacto con nosotros y estableceremos donde enviarte una contraseña de verificación a un nuevo correo.</p>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-12">
-                                  <div id="imagen">
-                                    <img src="resources/inicio/reseña.png" class="card-img-top reseñaImg">
-                                    <img src="resources/inicio/circulosG.png" class="card-img-top circuloG">
-                                    <img src="resources/inicio/circulosP.png" class="card-img-top circuloP">
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container-fluid" id="requerimientos">
-                      <div class="row">
-                        <div class="col-12 banner2">
-                          <h1 id="reque">Requerimientos <img src="resources/inicio/processor_100px.png" class="Contentidoimagenes"></h1>
-                        </div>
-                        <div class="col-12 contenidos">
-                          <div class="row">
-                            <div class="col-12 contenido3">
-                              <div class="row">
-                                <div class="col-12">
-                                  <div class="row">
-                                    <div class="col-12 contenido3">
-                                      <div class="card" >
-                                        <div class="card-body">
-                                          <img src="resources/inicio/reque.png" class="card-img-top" align="center"  >
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="container-fluid" id="contactenos">
-                      <div class="row">
-                        <div class="col-12 banner2">
-                          <h1>Contáctenos <img src="resources/inicio/phone_100px.png" class="Contentidoimagenes"></h1>
-                        </div>
-                        <div class="col-12 contenidos">
-                          <div class="row">
-                            <div class="col-12 contenido3">
-                              <div class="row">
-                                <div class="col-xs-12 col-sm-12 col-md-5 col-lg-3 col-xl-3 col-xxl-3 mt-3">
-                                  <img src="resources/inicio/tel.png" id="i-mapa" class="card-img-top" id="aviso-imagen" align="right"  >
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-7 col-lg-5 col-xl-5 col-xxl-5">
-                                  <div class="card" >
-                                    <div class="card-body">
-                                      <p id="parrafo" class="card-text">Puede contactarnos a cualquiera de los dos números que ponemos a continuación:</p>
-                                      <div class="jumbotron">
-                                        <h3 class="display-4"><span class="badge badge-pill badge-danger">8034-5678</span></h3>
-                                        <h3 class="display-4"><span class="badge badge-pill badge-danger">2548-7895</span></h3>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-4 col-xl-4 col-xxl-4 mt-3" id="mapa">
-                                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.9235223204464!2d-89.20744208516986!3d13.723079890366021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6330813f89e61f%3A0xcb93eef8cc8c07e1!2sInstituto%20T%C3%A9cnico%20Ricaldone!5e0!3m2!1ses!2ssv!4v1598884975092!5m2!1ses!2ssv" width="300" height="215" frameborder="0"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <hr>
-                        <div class="col-12 contenidos">
-                          <div class="row">
-                            <div class="col-12">
-                              <div class="row">
-                                <div class="col-12 col-sm-6">
-                                  <div class="row">
-                                    <div class="col-12 contenido3" >
-                                      <div class="card" >
-                                        <div class="card-body" >
-                                          <div align="center">
-                                            <form action="" method="post" autocomplete="off"> 
-                                              <h3>Información Personal</h3>
-                                              <div> 
-                                                <h5>Nombre</h5>
-                                                <input type="text" name="nombre" required> 
-                                              </div>
-                                              <br>
-                                              <div class="form-group"><h5>Correo Electrónico</h5>
-                                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@gmail.com" required>
-                                              </div>
-                                              <div> 
-                                                <h5>Télefono</h5>
-                                                <input type="text" name="telefono" required> <br>
-                                              </div>
-                                              <br>
-                                              <h3>Cuéntanos el error</h3> 
-                                              <textarea id="escribe" name="Comentarios" rows="5" cols="30" placeholder="Escriba aquí..."></textarea>
-                                              <br>
-                                              <!-- Button modal -->
-                                              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalEnviar">Enviar</button>
-                                              <!-- Modal -->
-                                              <div class="modal fade" id="ModalEnviar" tabindex="-1" aria-labelledby="ModalEnviar" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                  <div class="modal-content">
-                                                    <div class="modal-header">
-                                                      <h5 class="modal-title titulomodal" id="ModalEnviar">Confirmación</h5>
-                                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                      </button>
-                                                    </div>
-                                                    <div class="modal-body textomodal">
-                                                      ¿Estás seguro de querer enviar tu comentario?
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                      <input type="submit" class="btn btn-primary">Enviar
-                                                    </div>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                              <input type="reset" name="borrar"class="btn btn-danger" value="Borrar">
-                                            </form>
-                                          </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="col-12 col-sm-6">
-                                <div class="row">
-                                  <div class="col-12 contenido3">
-                                    <div class="card" >
-                                      <div class="card-body mt-5 mb-5">
-                                        <img src="resources/inicio/enviar.png " id="enviar" align="center" class="card-img-top" >
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2 publicidad" id="publicidad">
-              <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                  <div class="carousel-item active" align="center" >
-                    <a href="https://www.facebook.com/">
-                      <img src="resources/inicio/face.png" id="carrusel" class="d-block w-100" alt="f1"  >
-                    </a>
-                  </div>
-                  <div class="carousel-item" align="center" >
-                    <a href="https://www.instagram.com/?hl=es-la">
-                      <img src="resources/inicio/insta.png" id="carrusel" class="d-block w-100" alt="f2">
-                    </a>
-                  </div>
-                  <div class="carousel-item" align="center" >
-                    <a href="https://www.youtube.com/?hl=es-419">
-                      <img src="resources/inicio/youtube.png" id="carrusel" class="d-block w-100" alt="f3" >
-                    </a>
-                  </div>
-                </div>
-                  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
-                <h3><span class="badge badge-danger">Redes <br>Sociales</span></h3>
-                <a type="button" href="#todo" class="btn btn-info">Inicio <img src="resources/inicio/home_page_100px.png" class="mb-2" widht="25px" height="25px" ></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row" id="pie">
-          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 contactenos">
-            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2 contacto">
-              <a type="button" href="#contactenos" class="btn btn-info">Contáctenos</a>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 col-xxl-8 numeros">
-              <p>Democratic — Plantilla de sistema de votación</p>
-              <p>Derechos reservados 2026</p>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2 numeros">
-              <p>8034-5678</p>
-              <p>2548-7895</p>
-            </div>
-          </div>
-        </div>
-      </div>         
-      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-      <script src="js/config.js"></script>
-      <script src="js/charts.js"></script>
-      <script src="js/funciones.js"></script>
-      <script>
-        $(function () {
-          $('[data-toggle="tooltip"]').tooltip();
-        });
-      </script>
-    </body>
-  </html>   
+  <nav class="navbar navbar-expand-xl navbar-dark bg-dark sticky-top shadow-sm" aria-label="Navegación principal">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#inicio">Democratic</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Mostrar navegación"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#informacion">Información</a></li>
+          <li class="nav-item"><a class="nav-link" href="#demostraciones">Demostración</a></li>
+          <li class="nav-item"><a class="nav-link" href="#resultados">Resultados</a></li>
+          <li class="nav-item"><a class="nav-link" href="#equipo">Equipo</a></li>
+          <li class="nav-item dropdown">
+            <button class="nav-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Recursos</button>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#manuales">Manuales</a></li>
+              <li><a class="dropdown-item" href="#errores">Preguntas frecuentes</a></li>
+              <li><a class="dropdown-item" href="#requerimientos">Requerimientos</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#contactenos">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
+  <main>
+    <section class="section-block">
+      <div class="container">
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-8">
+            <article class="hero-card rounded-4 p-4 p-md-5 h-100 shadow">
+              <span class="badge text-bg-info mb-3">Votación configurable</span>
+              <h2 class="display-5 fw-bold">Organice votaciones claras y adaptables</h2>
+              <p class="lead">Configure opciones, registre participantes, asigne sedes y consulte resultados visuales desde una solución genérica.</p>
+              <div class="d-flex flex-wrap gap-2"><a class="btn btn-info btn-lg" href="#informacion">Conocer el producto</a><a class="btn btn-outline-light btn-lg" href="#resultados">Ver gráficas demo</a></div>
+            </article>
+          </div>
+          <div class="col-lg-4">
+            <article class="content-card rounded-4 p-4 h-100 text-center shadow-sm">
+              <img class="hero-logo img-fluid mb-3" src="resources/inicio/logo.png" alt="Democratic" width="192" height="192">
+              <h2 class="h3">Una base para cada organización</h2>
+              <p class="text-white-50 mb-0">Empresas, centros educativos, asociaciones y encuestas internas.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="informacion" class="section-block">
+      <div class="container">
+        <h2 class="section-heading d-flex align-items-center gap-3">Información <img class="section-icon" src="resources/inicio/info_100px.png" alt="" width="48" height="48"></h2>
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-8">
+            <div class="content-card rounded-4 p-4">
+              <h3>¿Qué es Democratic?</h3>
+              <p>Es una plantilla de votación electrónica adaptable a juntas directivas, elecciones escolares, asambleas, encuestas internas y consultas organizacionales.</p>
+              <h3 class="h5 mt-4">Funciones principales</h3>
+              <div class="row row-cols-1 row-cols-sm-2 g-3">
+                <div class="col"><div class="p-3 rounded bg-dark h-100">Gestión de opciones y participantes</div></div>
+                <div class="col"><div class="p-3 rounded bg-dark h-100">Organización por sedes y mesas</div></div>
+                <div class="col"><div class="p-3 rounded bg-dark h-100">Confirmación y registro del voto</div></div>
+                <div class="col"><div class="p-3 rounded bg-dark h-100">Resultados y reportes visuales</div></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center"><img class="feature-image img-fluid" src="resources/inicio/demostraciones.png" alt="Vista conceptual del sistema" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="demostraciones" class="section-block">
+      <div class="container">
+        <h2 class="section-heading d-flex align-items-center gap-3">Flujo de uso <img class="section-icon" src="resources/inicio/laptop_100px.png" alt="" width="48" height="48"></h2>
+        <div class="row g-4">
+          <div class="col-lg-7">
+            <div class="row row-cols-1 row-cols-md-3 g-3 h-100">
+              <div class="col"><article class="content-card rounded-4 p-4 h-100"><span class="badge text-bg-info mb-3">1</span><h3 class="h5">Configuración</h3><p class="mb-0">El administrador define opciones, participantes, sedes y reglas.</p></article></div>
+              <div class="col"><article class="content-card rounded-4 p-4 h-100"><span class="badge text-bg-info mb-3">2</span><h3 class="h5">Votación</h3><p class="mb-0">Cada participante accede, selecciona y confirma su voto.</p></article></div>
+              <div class="col"><article class="content-card rounded-4 p-4 h-100"><span class="badge text-bg-info mb-3">3</span><h3 class="h5">Resultados</h3><p class="mb-0">El sistema consolida los datos en gráficas y reportes.</p></article></div>
+            </div>
+          </div>
+          <div class="col-lg-5"><div class="ratio ratio-16x9 rounded overflow-hidden"><iframe src="https://www.youtube.com/embed/pj2e2J134hI" title="Demostración de Democratic" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="resultados" class="section-block">
+      <div class="container" id="graficas">
+        <h2 class="section-heading">Resultados y gráficas</h2>
+
+        <article class="results-dashboard content-card rounded-4 p-4 mb-4">
+          <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-start gap-3 mb-4">
+            <div>
+              <span class="badge text-bg-info mb-2">Demo en vivo</span>
+              <h3 id="votacion-titulo" class="h4 mb-1">Cargando demostración...</h3>
+              <p id="votacion-tagline" class="text-white-50 mb-0 small"></p>
+            </div>
+            <button type="button" class="btn btn-info btn-lg align-self-start" id="btn-simular-voto">Simular voto</button>
+          </div>
+          <div class="row row-cols-2 row-cols-lg-4 g-3">
+            <div class="col">
+              <div class="result-kpi rounded-3 p-3 h-100 border border-light border-opacity-10">
+                <p class="result-kpi-label small text-white-50 mb-1">Total de votos</p>
+                <p class="result-kpi-value h3 mb-0 fw-bold" id="kpi-total" aria-live="polite">—</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="result-kpi rounded-3 p-3 h-100 border border-light border-opacity-10">
+                <p class="result-kpi-label small text-white-50 mb-1">Opción líder</p>
+                <p class="result-kpi-value h5 mb-0 fw-semibold text-truncate" id="kpi-lider" title="">—</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="result-kpi rounded-3 p-3 h-100 border border-light border-opacity-10">
+                <p class="result-kpi-label small text-white-50 mb-1">Participación líder</p>
+                <p class="result-kpi-value h3 mb-0 fw-bold" id="kpi-lider-share">—</p>
+              </div>
+            </div>
+            <div class="col">
+              <div class="result-kpi rounded-3 p-3 h-100 border border-light border-opacity-10">
+                <p class="result-kpi-label small text-white-50 mb-1">Último registro</p>
+                <p class="result-kpi-value h3 mb-0 fw-bold" id="kpi-tendencia">—</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <article class="chart-card rounded-4 p-4 h-100">
+              <div class="d-flex justify-content-between align-items-center gap-2 mb-3">
+                <h3 class="h5 mb-0">Ranking por opción</h3>
+                <span class="badge text-bg-secondary" id="ranking-badge">—</span>
+              </div>
+              <div id="resultados-resumen" class="d-flex flex-column gap-3" aria-live="polite"></div>
+            </article>
+          </div>
+          <div class="col-lg-7">
+            <article class="chart-card rounded-4 p-4 h-100 d-flex flex-column">
+              <ul class="nav nav-pills nav-fill mb-3 flex-nowrap overflow-auto" id="chart-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active text-nowrap" id="tab-barras" data-bs-toggle="pill" data-bs-target="#panel-barras" type="button" role="tab" aria-controls="panel-barras" aria-selected="true">Comparativa</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-nowrap" id="tab-pastel" data-bs-toggle="pill" data-bs-target="#panel-pastel" type="button" role="tab" aria-controls="panel-pastel" aria-selected="false">Distribución</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link text-nowrap" id="tab-linea" data-bs-toggle="pill" data-bs-target="#panel-linea" type="button" role="tab" aria-controls="panel-linea" aria-selected="false">Evolución</button>
+                </li>
+              </ul>
+              <div class="tab-content chart-tab-content flex-grow-1">
+                <div class="tab-pane fade show active h-100" id="panel-barras" role="tabpanel" aria-labelledby="tab-barras" tabindex="0">
+                  <p class="small text-white-50 mb-2">Votos registrados por cada opción</p>
+                  <div class="chart-canvas-wrap">
+                    <canvas id="chart-barras" aria-label="Gráfica de barras de resultados" role="img"></canvas>
+                  </div>
+                </div>
+                <div class="tab-pane fade h-100" id="panel-pastel" role="tabpanel" aria-labelledby="tab-pastel" tabindex="0">
+                  <p class="small text-white-50 mb-2">Porcentaje de participación por opción</p>
+                  <div class="chart-canvas-wrap">
+                    <canvas id="chart-pastel" aria-label="Gráfica circular de resultados" role="img"></canvas>
+                  </div>
+                </div>
+                <div class="tab-pane fade h-100" id="panel-linea" role="tabpanel" aria-labelledby="tab-linea" tabindex="0">
+                  <p class="small text-white-50 mb-2">Acumulado de votos por periodo</p>
+                  <div class="chart-canvas-wrap">
+                    <canvas id="chart-linea" aria-label="Gráfica de evolución de resultados" role="img"></canvas>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="reseñas" class="section-block">
+      <div class="container">
+        <h2 class="section-heading">Testimonios</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col"><article class="testimonial rounded-4 p-4 h-100 d-flex gap-3"><img class="testimonial-avatar rounded-circle" src="resources/inicio/gaby.png" alt="Ana M." loading="lazy"><div><h3 class="h5">Ana M.</h3><p class="mb-0">La configuración fue sencilla y las gráficas nos permitieron presentar los resultados al instante.</p></div></article></div>
+          <div class="col"><article class="testimonial rounded-4 p-4 h-100 d-flex gap-3"><img class="testimonial-avatar rounded-circle" src="resources/inicio/lenny.png" alt="Carlos R." loading="lazy"><div><h3 class="h5">Carlos R.</h3><p class="mb-0">La interfaz es clara y el panel resume visualmente toda la encuesta interna.</p></div></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="equipo" class="section-block">
+      <div class="container">
+        <h2 class="section-heading">Equipo de trabajo</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col"><article class="team-card rounded-4 p-4 h-100 d-flex gap-3"><img class="team-avatar rounded-circle" src="resources/inicio/gaby.png" alt="Gabriela Méndez" loading="lazy"><div><h3 class="h5">Gabriela Méndez</h3><p class="mb-0 text-white-50">Diseño principal y coordinación del proyecto.</p></div></article></div>
+          <div class="col"><article class="team-card rounded-4 p-4 h-100 d-flex gap-3"><img class="team-avatar rounded-circle" src="resources/inicio/lenny.png" alt="Lenny Elías" loading="lazy"><div><h3 class="h5">Lenny Elías</h3><p class="mb-0 text-white-50">Programación, interfaz y base de datos.</p></div></article></div>
+          <div class="col"><article class="team-card rounded-4 p-4 h-100 d-flex gap-3"><img class="team-avatar rounded-circle" src="resources/inicio/vargas.png" alt="Eduardo Vargas" loading="lazy"><div><h3 class="h5">Eduardo Vargas</h3><p class="mb-0 text-white-50">Programación y diseño de base de datos.</p></div></article></div>
+          <div class="col"><article class="team-card rounded-4 p-4 h-100 d-flex gap-3"><img class="team-avatar rounded-circle" src="resources/inicio/monica.png" alt="Mónica Mejía" loading="lazy"><div><h3 class="h5">Mónica Mejía</h3><p class="mb-0 text-white-50">Diseño y desarrollo del sitio web.</p></div></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="manuales" class="section-block">
+      <div class="container">
+        <h2 class="section-heading">Manuales y descargas</h2>
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+          <div class="col"><article class="content-card rounded-4 p-4 h-100"><h3 class="h4">Manual técnico</h3><p>Arquitectura, diagramas y aspectos técnicos del sistema.</p><div class="d-flex gap-2"><a class="btn btn-outline-light" href="resources/inicio/Manual tecnico.pdf" target="_blank" rel="noopener">Vista previa</a><a class="btn btn-info" href="resources/inicio/Manual tecnico.docx" download>Descargar</a></div></article></div>
+          <div class="col"><article class="content-card rounded-4 p-4 h-100"><h3 class="h4">Manual de requerimientos</h3><p>Requisitos mínimos y consideraciones para instalar el sistema.</p><a class="btn btn-outline-light" href="resources/inicio/Manual de requerimientos.pdf" target="_blank" rel="noopener">Vista previa</a></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="errores" class="section-block">
+      <div class="container">
+        <h2 class="section-heading">Preguntas frecuentes</h2>
+        <div class="accordion" id="faq">
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne">¿Qué hago si la instalación no inicia?</button></h3><div id="faqOne" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Compruebe la conexión y que el servicio no esté en mantenimiento. Si continúa, contacte al equipo técnico.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="false" aria-controls="faqTwo">¿Qué hago si el sistema no abre después de instalarlo?</button></h3><div id="faqTwo" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Verifique la compatibilidad del sistema operativo y que .NET Framework esté actualizado a la versión requerida.</div></div></div>
+          <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="false" aria-controls="faqThree">¿Cómo recupero mi contraseña?</button></h3><div id="faqThree" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Use la recuperación por correo. Si perdió acceso al correo registrado, contacte al administrador.</div></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="requerimientos" class="section-block">
+      <div class="container">
+        <h2 class="section-heading">Requerimientos</h2>
+        <div class="content-card rounded-4 p-3 text-center"><img class="requirements-image img-fluid" src="resources/inicio/reque.png" alt="Requerimientos del sistema" loading="lazy"></div>
+      </div>
+    </section>
+
+    <section id="contactenos" class="section-block">
+      <div class="container">
+        <h2 class="section-heading">Contáctenos</h2>
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <form class="content-card rounded-4 p-4" action="#contactenos" method="get">
+              <div class="mb-3"><label class="form-label" for="nombre">Nombre</label><input class="form-control" type="text" id="nombre" name="nombre" autocomplete="name" required></div>
+              <div class="mb-3"><label class="form-label" for="correo">Correo electrónico</label><input class="form-control" type="email" id="correo" name="correo" autocomplete="email" required></div>
+              <div class="mb-3"><label class="form-label" for="mensaje">Mensaje</label><textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea></div>
+              <button class="btn btn-info" type="submit">Enviar consulta</button>
+            </form>
+          </div>
+          <div class="col-lg-6"><iframe class="map-frame h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.9235223204464!2d-89.20744208516986!3d13.723079890366021!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f6330813f89e61f%3A0xcb93eef8cc8c07e1!2sInstituto%20T%C3%A9cnico%20Ricaldone!5e0!3m2!1ses!2ssv!4v1598884975092!5m2!1ses!2ssv" title="Ubicación de contacto" loading="lazy" allowfullscreen></iframe></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer py-4">
+    <div class="container d-flex flex-column flex-md-row justify-content-between gap-2 text-center text-md-start"><span>Democratic | Plantilla de sistema de votación</span><span>Derechos reservados 2026</span><a class="link-info" href="#inicio">Volver al inicio</a></div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/funciones.js"></script>
+</body>
+</html>
