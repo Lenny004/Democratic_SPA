@@ -21,7 +21,13 @@ a {
 }
 
 .site-header {
+  position: relative;
+  z-index: 1030;
   background: linear-gradient(135deg, var(--democratic-primary-dark), var(--democratic-primary));
+}
+
+.site-header .dropdown-menu {
+  z-index: 1031;
 }
 
 .brand-logo {
